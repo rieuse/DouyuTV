@@ -3,13 +3,12 @@ __author__ = '布咯咯_rieuse'
 __time__ = '2017.6.2'
 __github__ = 'https://github.com/rieuse'
 
-
 import jieba
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
 from scipy.misc import imread
+from wordcloud import WordCloud
 
-with open('大司马即将上课前后.txt','r',encoding='utf-8') as f:
+with open('大司马即将上课前后.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 
 cut_text = " ".join(jieba.cut(text))
@@ -19,7 +18,7 @@ cloud = WordCloud(
     background_color='MistyRose',
     mask=color_mask,
     max_words=4000,
-    font_step=5, #步调太大，显示的词语就少了
+    font_step=5,  # 步调太大，显示的词语就少了
     min_font_size=20,
     max_font_size=180
 )
