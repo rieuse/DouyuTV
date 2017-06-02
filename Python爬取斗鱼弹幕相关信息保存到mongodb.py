@@ -4,9 +4,10 @@ __time__ = '2017.6.2'
 __github__ = 'https://github.com/rieuse'
 
 import multiprocessing
+import re
 import socket
 import time
-import re
+
 import pymongo
 import requests
 from bs4 import BeautifulSoup
@@ -24,6 +25,7 @@ danmu_path = re.compile(b'txt@=(.+?)/cid@')
 uid_path = re.compile(b'uid@=(.+?)/nn@')
 nickname_path = re.compile(b'nn@=(.+?)/txt@')
 level_path = re.compile(b'level@=([1-9][0-9]?)/sahf')
+
 
 def sendmsg(msgstr):
     msg = msgstr.encode('utf-8')

@@ -4,12 +4,12 @@ __time__ = '2017.6.2'
 __github__ = 'https://github.com/rieuse'
 
 import multiprocessing
+import re
 import socket
 import time
-import re
+
 import requests
 from bs4 import BeautifulSoup
-
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = socket.gethostbyname("openbarrage.douyutv.com")
@@ -17,6 +17,7 @@ port = 8601
 client.connect((host, port))
 
 danmu = re.compile(b'txt@=(.+?)/cid@')
+
 
 def sendmsg(msgstr):
     msg = msgstr.encode('utf-8')
@@ -52,6 +53,7 @@ def start(roomid):
                         fo.writelines(txt)
                     except:
                         continue
+
 
 def keeplive():
     while True:
