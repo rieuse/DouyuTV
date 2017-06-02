@@ -11,6 +11,7 @@ all_game = 'http://open.douyucdn.cn/api/RoomApi/game'
 sort = []
 
 
+
 def parser(url):
     html = requests.get(url).text
     soup = BeautifulSoup(html, 'lxml')
