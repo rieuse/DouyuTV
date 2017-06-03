@@ -16,7 +16,7 @@ with open('大司马上课后.txt','r',encoding='utf-8') as f:
 cut_text = " ".join(jieba.cut(text))
 
 d = os.path.dirname(__file__)
-color_mask = np.array(Image.open(os.path.join(d,'8.jpg')))
+color_mask = np.array(Image.open(os.path.join(d,'img.jpg')))
 my_wordcloud = WordCloud(
     background_color='#F0F8FF',      # 背景颜色
     font_path="FZLTKHK--GBK1-0.ttf", # 使用特殊字体可以显示中文
