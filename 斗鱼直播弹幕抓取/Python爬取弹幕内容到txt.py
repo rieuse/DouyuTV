@@ -45,7 +45,7 @@ def start(roomid):
             break
         else:
             for i in range(0, len(danmu_more)):
-                with open('danmu_1txt', 'a') as fo:
+                with open('danmu_1.txt', 'a') as fo:
                     try:
                         print(danmu_more[0].decode(encoding='utf-8'))
                         txt = danmu_more[0].decode(encoding='utf-8') + '\n'

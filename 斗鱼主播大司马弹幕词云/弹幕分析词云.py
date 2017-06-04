@@ -3,7 +3,7 @@ __author__ = '布咯咯_rieuse'
 __time__ = '2017.6.2'
 __github__ = 'https://github.com/rieuse'
 
-import jieba
+import jieba,jieba.analyse
 from wordcloud import WordCloud, ImageColorGenerator
 import matplotlib.pyplot as plt
 import os
@@ -14,6 +14,7 @@ with open('大司马即将上课前后.txt','r',encoding='utf-8') as f:
     text = f.read()
     f.close()
 cut_text = " ".join(jieba.cut(text))  #使用空格连接 进行中文分词
+cut_an= jieba.analyse.extract_tags(cut_text,30)  # 关键词提取,返回权重最高的前30，数字可以不填默认20
 
 d = os.path.dirname(__file__) # 获取当前文件路径
 color_mask = np.array(Image.open(os.path.join(d,'img.jpg')))   # 设置图片

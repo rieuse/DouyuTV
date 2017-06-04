@@ -6,7 +6,7 @@ from pymongo import MongoClient
 
 client = MongoClient('localhost')
 db = client["DouyuTV"]
-col = db["Roominfo"]
+col = db["Roominfo2"]
 host = 'http://api.douyutv.com/api/v1/live/'
 all_game = 'http://open.douyucdn.cn/api/RoomApi/game'
 sort = []
@@ -32,6 +32,8 @@ def get_room_info():
         data = jn['data']
         try:
             col.insert(data)
+            # print(data)
+            print('插入一条数据成功')
         except Exception as e:
             pass
 

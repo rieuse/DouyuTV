@@ -52,7 +52,7 @@ def start(roomid):
                         txt = danmu_more[0].decode(encoding='utf-8') + '\n'
                         fo.writelines(txt)
                     except:
-                        continue
+                        print('出错了')
 
 
 def keeplive():
