@@ -1,5 +1,5 @@
 # DouyuTV
 > 这个仓库是做DouyuTV弹幕爬取，房间信息爬取，数据分析的。还有很多优化的地方，我继续改善。
-#### 我的简书地址：**http://www.jianshu.com/u/28fbebb6ac57**
-#### 我的博客地址：**http://bulolo.cn**
-#### 我的 QQ 地址：[QQ和我交流，一起学习进步](http://wpa.qq.com/msgrd?v=3&uin=553704903&site=qq&menu=yes)
+#### 简书地址：**http://www.jianshu.com/u/28fbebb6ac57**
+#### 博客地址：**http://bulolo.cn**
+####  QQ 地址：[QQ和我交流，一起学习进步](http://wpa.qq.com/msgrd?v=3&uin=553704903&site=qq&menu=yes)

@@ -14,7 +14,6 @@ with open('大司马即将上课前后.txt','r',encoding='utf-8') as f:
     text = f.read()
     f.close()
 cut_text = " ".join(jieba.cut(text))  #使用空格连接 进行中文分词
-
 d = os.path.dirname(__file__) # 获取当前文件路径
 color_mask = np.array(Image.open(os.path.join(d,'img.jpg')))   # 设置图片
 cloud = WordCloud(
@@ -33,5 +32,4 @@ plt.show(cloud.recolor(color_func=image_colors))  # 绘制时用背景图片做�
 plt.imshow(cloud)            # 以图片的形式显示词云
 plt.axis('off')                     # 关闭坐标轴
 plt.show()                          # 展示图片
-
 cloud.to_file(os.path.join(d, 'pic.jpg'))  # 图片大小将会按照 mask 保存
